@@ -123,7 +123,9 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/login');
+                            },
                             child: const Text('Continue'),
                           ),
                         ),

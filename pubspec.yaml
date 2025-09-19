@@ -40,8 +40,9 @@ flutter:
   # ---------------- LOCAL ASSETS ----------------
   assets:
     - assets/logos/
-    - assets/icons/brands/
+    - assets/logos/clubs/
     - assets/images/
+    - assets/images/profile/
 
   # ---------------- LOCAL FONTS ----------------
   fonts:
@@ -63,3 +64,18 @@ flutter:
           weight: 600
         - asset: assets/fonts/Poppins-Bold.ttf
           weight: 800
+
+flutter_native_splash:
+  color: "#FFFFFF"                # Background for light mode
+  color_dark: "#272727"           # Background for dark mode
+  image: assets/logos/light/light_logo_1.png   # Light mode logo
+  image_dark: assets/logos/dark/dark_logo_1.png   # Dark mode logo
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#272727"
+    image: assets/logos/light/light_logo_1.png
+    image_dark: assets/logos/dark/dark_logo_1.png
+
+  web: false
+

@@ -2,10 +2,12 @@ import 'package:connected_app/features/home/screens/homapage.dart';
 import 'package:connected_app/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 
-import 'features/authentication/screens/login/login.dart';
-import 'features/authentication/screens/reset_password/reset_password.dart';
-import 'features/authentication/screens/signup/otp_verification.dart';
-import 'features/authentication/screens/signup/signup.dart';
+
+import 'features/my_events/screens/my_events_page.dart';
+import 'features/profile/screens/profile.dart';
+import 'features/routes/app_pages.dart';
+import 'features/routes/app_routes.dart';
+import 'features/bottom_navigation/bottom_navigation.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,12 +18,17 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: CAppTheme.lightTheme,
       darkTheme: CAppTheme.darkTheme,
+      debugShowCheckedModeBanner: false,
       // home: const LoginScreen(),
       // home: const SignupScreen(),
       // home: const OTPVerificationScreen(),
       // home: const ResetPasswordScreen(),
-      home: const homepage(),
-      debugShowCheckedModeBanner: false,
+      // home: const homepage(),
+      // home: const ProfilePage(),
+      // home: const MyEventsPage(),
+      home: const MainBottomNavigation(),
+      // initialRoute: AppRoutes.login,
+      // routes: AppPages.routes,
     );
   }
 }

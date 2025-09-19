@@ -76,17 +76,33 @@ class LoginScreen  extends StatelessWidget {
                           ), // Row
 
                           // Forget Password
-                          TextButton(onPressed: () {}, child: const Text("Forget Password?")),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/reset-password');
+                            },
+                            child: const Text("Forget Password?")),
                         ],
                       ), // Row
                       const SizedBox(height: TSizes.spaceBtwSections),
 
                       // Sign In Button
-                      SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () {}, child: const Text("Sign In"))),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/home');
+                          },
+                          child: const Text("Sign In"))),
                       const SizedBox(height: TSizes.spaceBtwItems),
 
                       // Create Account Button
-                      SizedBox(width: double.infinity, child: OutlinedButton(onPressed: () {}, child: const Text('Create an Account'))),
+                      SizedBox(
+                        width: double.infinity,
+                        child: OutlinedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/signup');
+                          },
+                          child: const Text('Create an Account'))),
                       const SizedBox(height: TSizes.spaceBtwSections),
                     ],
                   ),
@@ -172,4 +188,3 @@ class LoginScreen  extends StatelessWidget {
     );
   }
 }
-

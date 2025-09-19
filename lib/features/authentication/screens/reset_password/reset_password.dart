@@ -63,7 +63,9 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/otp-verification');
+                            },
                             child: const Text('Continue'),
                           ),
                         ),
@@ -79,4 +81,3 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     );
   }
 }
-

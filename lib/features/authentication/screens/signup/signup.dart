@@ -3,7 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/constants/text_strings.dart';
+
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -67,7 +67,15 @@ class SignupScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: TSizes.spaceBtwSections),
                       // Register Button
-                      SizedBox(width: double.infinity, child: ElevatedButton(onPressed: () {}, child: const Text("Register"))),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/home');
+                          },
+                          child: const Text("Register"),
+                        ),
+                      ),
                       const SizedBox(height: TSizes.spaceBtwItems),
                       // OR Divider
                       Row(
@@ -107,7 +115,12 @@ class SignupScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("Already have an account?", style: Theme.of(context).textTheme.bodyMedium),
-                          TextButton(onPressed: () {}, child: const Text("Login")),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/login');
+                            },
+                            child: const Text("Login"),
+                          ),
                         ],
                       ),
                     ],
